@@ -1,0 +1,184 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body === */
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  background-color: #000;
+}
+
+/* === Glowing Sphere Background === */
+.bg-sphere {
+  position: absolute;
+  width: 180vmax;
+  height: 180vmax;
+  background: radial-gradient(circle, rgba(138,43,226,0.7), transparent 60%);
+  border-radius: 50%;
+  filter: blur(180px);
+  animation: sphereMove 15s ease-in-out infinite alternate;
+}
+
+@keyframes sphereMove {
+  0% { top: -30%; left: -30%; }
+  50% { top: 10%; left: 60%; }
+  100% { top: -20%; left: 20%; }
+}
+
+/* === Main Content === */
+.content {
+  text-align: center;
+  z-index: 2;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+h1:hover {
+  opacity: 0.8;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+button {
+  margin-top: 35px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  border: 1.5px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+/* === Popup === */
+.popup {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  max-width: 280px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  z-index: 999;
+}
+
+.popup .close-popup {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  color: #555;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup .close-popup:hover {
+  color: #000;
+}
+
+/* === About Card === */
+.about-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #000;
+  z-index: 10;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  animation: fadeUp 0.8s ease;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.about-card h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #6a0dad;
+}
+
+.about-card p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #333;
+}
+
+.contact-info a {
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6a0dad;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  opacity: 0.6;
+}

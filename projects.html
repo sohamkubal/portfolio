@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #eaeaea;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 40px 10%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #2d2d2d;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .projects-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .project-card {
+      background: #141414;
+      border: 1px solid #2d2d2d;
+      border-radius: 12px;
+      padding: 25px;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .project-card h2 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #bcbcbc;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #1e90ff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .project-card a:hover {
+      color: #00ffcc;
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      display: inline-block;
+      background: #1e90ff;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Cybersecurity & Tech Projects</h1>
+
+  <div class="projects-container">
+
+    <!-- Password Strength Meter Project -->
+    <div class="project-card">
+      <h2>Password Strength Meter 💻</h2>
+      <p>A web-based tool that checks password strength and detects breaches using the HaveIBeenPwned API. Built with HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/password-strength-checker" target="_blank">🔗 View Source on GitHub</a>
+    </div>
+
+    <!-- Python Password Strength Checker -->
+    <div class="project-card">
+      <h2>Password Strength Checker 🔐</h2>
+      <p>A Python-based command-line tool that evaluates password security using multiple parameters like length, symbols, entropy score, and breach detection. It helps users analyze and improve their password safety.</p>
+      <a href="https://github.com/YOUR_GITHUB_USERNAME/password_checker" target="_blank">🔗 View Source on GitHub</a>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+</body>
+</html>

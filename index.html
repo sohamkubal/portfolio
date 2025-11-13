@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soham Kubal | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-sphere"></div>
+
+  <div class="popup" id="popupBox">
+    <span class="close-popup" id="closePopup">✕</span>
+    💡 Tip: Click on <b>"Soham Kubal"</b> to know more about me.<br><br>
+    📂 Click on <b>"View My Work"</b> to explore my projects.
+  </div>
+
+  <div class="content">
+    <h1 id="nameTitle">Soham Kubal</h1>
+    <h2>BCA Student | Aspiring Cybersecurity Specialist</h2>
+    <a href="projects.html"><button>View My Work</button></a>
+
+  </div>
+
+  <div class="about-card" id="aboutCard">
+    <button class="close-btn" id="closeAbout">✕</button>
+    <h3>Who Am I?</h3>
+    <p>
+      I’m <b>Soham Kubal</b> — a tech enthusiast and cybersecurity learner from Mumbai.  
+      Currently pursuing my Bachelor of Computer Applications  under  
+      <b>Tilak Maharashtra Vidyapeeth University</b>, I aim to build a future where digital systems are secure,  
+      ethical, and resilient.  
+
+      My journey in technology started with curiosity — a passion to understand how systems work,  
+      how they break, and how they can be fortified. With a strong interest in networking,  
+      Linux, and ethical hacking, I’m continuously exploring tools and methods to defend against  
+      cyber threats and build smarter, safer infrastructure.
+    </p>
+
+    <div class="contact-info">
+      📧 Email: <a href="mailto:kubalsoham519@gmail.com">kubalsoham519@gmail.com</a><br>
+      🔗 LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/sohamkubal</a>
+    </div>
+  </div>
+
+  <script>
+    const nameTitle = document.getElementById('nameTitle');
+    const aboutCard = document.getElementById('aboutCard');
+    const closeAbout = document.getElementById('closeAbout');
+    const popupBox = document.getElementById('popupBox');
+    const closePopup = document.getElementById('closePopup');
+
+    nameTitle.addEventListener('click', () => {
+      aboutCard.style.display = 'block';
+    });
+
+    closeAbout.addEventListener('click', () => {
+      aboutCard.style.display = 'none';
+    });
+
+    closePopup.addEventListener('click', () => {
+      popupBox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
