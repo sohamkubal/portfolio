@@ -182,3 +182,45 @@ button:hover {
 .close-btn:hover {
   opacity: 0.6;
 }
+
+/* === RESPONSIVE FIXES FOR MOBILE === */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-y: auto;
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about-card {
+    width: 90%;
+    padding: 25px 20px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .popup {
+    max-width: 90%;
+    left: 5%;
+    right: 5%;
+    font-size: 0.85rem;
+  }
+
+  .bg-sphere {
+    width: 120vmax;
+    height: 120vmax;
+    filter: blur(120px);
+  }
+}
