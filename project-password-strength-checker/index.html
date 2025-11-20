@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Password Strength Checker — Soham</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card-wrap">
+    <div class="card">
+      <h2>Password Strength Checker</h2>
+
+      <label class="pw-field">
+        <input id="password" type="password" placeholder="Enter password" autocomplete="off" />
+        <button id="toggleShow" aria-label="Show password">SHOW</button>
+      </label>
+
+      <div class="meter">
+        <div class="meter-bar zero" id="meterBar" style="width:0%"></div>
+      </div>
+
+      <div class="status" id="statusText">Enter a password to test</div>
+
+      <ul class="suggestions" id="suggestionsList"></ul>
+
+      <div class="breach-row">
+        <button id="checkBreach" class="ghost">Check breach (HIBP)</button>
+        <span id="breachResult" class="breachResult"></span>
+      </div>
+
+      <p class="note">Runs in your browser. Breach check uses privacy-safe k-anonymity (SHA-1 prefix).</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
